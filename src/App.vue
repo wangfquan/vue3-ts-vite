@@ -1,9 +1,17 @@
+<!--
+ * @Descripttion:
+ * @version: 项目搭建及相关插件配置
+ * @Author: wangfquan
+ * @Date: 2023-06-05 10:31:09
+ * @LastEditors:
+ * @LastEditTime: 2023-06-05 17:23:43
+-->
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import helloWorld from "./components/HelloWorld.vue";
 </script>
 
 <template>
-  <HelloWorld msg="Vite + Vue" />
+  <helloWorld msg="Vite + Vue" />
   <router-view />
 </template>
 

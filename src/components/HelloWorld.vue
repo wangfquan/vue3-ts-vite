@@ -1,9 +1,24 @@
+<!--
+ * @Descripttion:
+ * @version: 项目搭建及相关插件配置
+ * @Author: wangfquan
+ * @Date: 2023-06-05 10:31:09
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-06-06 12:02:44
+-->
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
-defineProps<{ msg: string }>()
+defineProps<{ msg: string }>();
 
-const count = ref(0)
+const count = ref(0);
+const onclick = () => {
+  if (count.value === 4) {
+    count.value += 3;
+  } else {
+    count.value += 2;
+  }
+};
 </script>
 
 <template>
@@ -11,24 +26,8 @@ const count = ref(0)
 
   <div class="card">
     <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+    <button type="button" @click="onclick">count is {{ count }}</button>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>
